@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% endblock content %}
-
 <section id="projects" class="container">
     <div class="container">
           
@@ -11,15 +9,15 @@
            <div class="col s12 l7">
              <div class="card">
                <div class="card-image">
-                 <img src="{{post.imageupload }}">
+                 <img src="{{post.imageupload.url }}">
                  <span class="card-title">{{post.Title_of_card}}</span>
                </div>
                <div class="card-content">
                  <p>      {{post.commment}} </p>
                </div>
                <div class="card-action">
-                 <a href="{{post. link_of_the_card }}">Heroku link</a>
-                 <a href="https://github.com/hassanyange/myproject">Github link</a>
+                 <a href="{{post.heroku_link}}">Heroku link</a>
+                 <a href="{{post.github_link}}">Github link</a>
                </div>
              </div>
            </div>
@@ -27,6 +25,10 @@
          </div>
 
       </div>
+
+
+      
        
 </section>
 <!--       end of project section-->
+{% endblock content %}

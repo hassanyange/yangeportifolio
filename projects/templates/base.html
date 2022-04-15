@@ -1,12 +1,15 @@
 
 
   <!DOCTYPE html>
+  {% load static %}
   <html>
     <head>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
          <!--JavaScript at end of body for optimized loading-->
          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -14,36 +17,48 @@
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!--Let browser know website is optimized for mobile-->
-      <link rel="stylesheet" href="/static/CSS/yange.css">
+      <link rel="stylesheet" href="https://materialize-social.css">
+      <link rel= "stylesheet" href="{% static 'CSS/yange.css' %}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <title>My portifoilio</title>
+
+
+
+      <style>
+        .column0{
+          max-width: 20%;
+          float: left;
+        }
+      </style>
     </head>
 
-    <body>   
+    <body >   
 
    <!--     Nav bar section-->
 
       <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Hassan Yange</a>
+        <div class="nav-wrapper black darken-4">
+          <a href="#!" class="brand-logo">HassanYange</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="{% url 'home_return' %}">Home</a></li>
+            <li><a  href="{% url 'home_return' %}">Home</a></li>
             <li><a href="{% url 'about_return' %}">About me</a></li>
             <li><a href="{% url 'projects_return' %}">Projects</a></li>
             <li><a href="{% url 'testimon_return' %} ">Testimonials</a></li>
             <li><a href="{% url 'contact_return' %}">Contact</a></li>
           </ul>
+          
         </div>
+        <ul class="sidenav"  id="mobile-demo">
+          <li><a  href="{% url 'home_return' %}">Home</a></li>
+          <li><a  href="{% url 'about_return' %}">About me</a></li>
+          <li><a  href="{% url 'projects_return' %}">Projects</a></li>
+          <li><a  href="{% url 'testimon_return' %} ">Testimonials</a></li>
+          <li><a  href="{% url 'contact_return' %}">Contact</a></li>
+        </ul>
       </nav>
     
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="{% url 'home_return' %}">Home</a></li>
-        <li><a href="{% url 'about_return' %}">About me</a></li>
-        <li><a href="{% url 'projects_return' %}">Projects</a></li>
-        <li><a href="{% url 'testimon_return' %} ">Testimonials</a></li>
-        <li><a href="{% url 'contact_return' %}">Contact</a></li>
-      </ul>
+      
                <!--  end   Nav bar section-->    
 
 
@@ -64,40 +79,60 @@
 
 
                      <!-- footer start -->
-      <footer class="footer container bg-brown darken-3">
-        <div class="footer_top ">
-            <div class="container bg-brown darken-3">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="lets_talk">
-                            <h4>Do you have any Project? <a href="{% url 'contact_return' %}">Let’s Talk</a> </h4>
-                            <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>
-                        </div>
-                    </div>
-                </div>
-           
-                </div>
+
+
+
+    <footer class="page-footer brown darken-4 mt-20 container ">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+        
+            <h5>Do you have any Project?    <a class="waves-effect waves-light btn-small" href="{% url 'contact_return'  %} ">Let's talk</a></h5>
+            <p class="grey-text text-lighten-4">Your project will be done accurately and quickly.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+           <h4>Call me</h4>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255685230096 -airtel ">
+                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255764977815 -vodacom ">
+                <label class="red-text" for="icon_telephone">Telephone</label>
+              </div>
             </div>
+
+
+
+
+            <div class="fixed-action-btn">
+              <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+              </a>
+              <h5 class="red-text push-l6">Text me here</h5> 
+              <ul>
+                <li><a class="btn-floating red"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn-floating blue darken-1"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="btn-floating green"><i class="fa fa-telegram"></i></a></li>
+                <li><a class="btn-floating blue"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>  
+
+
+
+          </div>
         </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> </a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="footer-copyright brown">
+        <div class="container ">
+        © 2022 |yange Master
+        
         </div>
+      </div>
     </footer>
+  
+  
+  
     <!--/ footer end  -->
-  
-  
-  
   
   
   
@@ -110,9 +145,14 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                  <!--JavaScript at end of body for optimized loading-->
                  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                
                  <script>
-                                        
-                      
+                  $(document).ready(function(){
+                    $('.slider').slider();
+                    $(".sidenav").sidenav();
+                    $('.fixed-action-btn').floatingActionButton();
+                    $('.tooltipped').tooltip();
+                  });
                  </script>
       </body>
     </html>

@@ -1,57 +1,87 @@
    
              {% extends "base.html" %}
                {% block content %}
-               <section id="about me" class="container  mt-3 mb-4">
+               <section id="about me" class=" mt-3 ">
 
-                <div class="highlight container" >
-   
-         <table>
-           <thead>
-             <tr>
-                 <th>Name</th>
-                 <th>Item Name</th>
-                 <th>Item Price</th>
-             </tr>
-           </thead>
-   
-           <tbody>
-             <tr>
-               <td>Alvin</td>
-               <td>Eclair</td>
-               <td>$0.87</td>
-             </tr>
-             
-         <table>
-           <thead>
-             <tr>
-                 <th>Name</th>
-                 <th>Item Name</th>
-                 <th>Item Price</th>
-             </tr>
-           </thead>
-   
-           <tbody>
-             <tr>
-               <td>Alvin</td>
-               <td>Eclair</td>
-               <td>$0.87</td>
-             </tr>
-             <tr>
-               <td>Alan</td>
-               <td>Jellybean</td>
-               <td>$3.76</td>
-             </tr>
-             <tr>
-               <td>Jonathan</td>
-               <td>Lollipop</td>
-               <td>$7.00</td>
-             </tr>
-           </tbody>
-         </table>
-           </tbody>
-         </table>
+               <!-- slider_area_start -->
+    <div class="slider_area">
+      <div class="single_slider  d-flex align-items-center slider_bg_1">
+          <div class="container">
+              <div class="row align-items-center position-relative">
+                  <div class="col s12 l5">
+                      <div class="slider_text">
+                          <h3>Hi there, I am Hassan <br>
+                              <span>Web developer</span></h3>
+                              <a class="waves-effect waves-light btn-small" href="{% url 'projects_return'  %} ">view projects</a>
+                      </div>
+                  </div>
+
+
+                  <div class="col  s12 l5 push-l2 ">
+                    
+                      <img class="circle image" src="/static/IMG/profile" >
+                     
+                  
                 </div>
+
+
+
+
+
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+ 
+  <!-- slider_area_end -->
+  <div class="container mb-6">
+    <h4 >My services</h4>
+    
+    <div class="row">
+      <div class="col s12 l5 offset-l1 border border-2 pull-l1 grey" >
+        <div class="single_service text-center ">
+          <div class="icon">
+              
+              
+          <img src="/static/IMG/icons.png" alt="">
+          </div>
+          <h5>
+                  Web  Design
+          </h5>
+          <p>Designing engaging and responsive landing pages</p>
+      </div>
+      </div>
+      <div class="col s12 l5 offset-l2 border border-2 pull-l1 grey ">
+        <div class="single_service text-center">
+          <div class="icon">
+              
+                 <img src="/static/IMG/Icons.png" alt="">
+          </div>
+          <h5>
+                  Web  Developer
+          </h5>
+          <p>Writing efficient code,
+            Creating websites/a website using standard HTML/CSS practices</p>
+      </div>
+      </div>
+      <div class="col s12 l5 offset-l2 border border-2 pull-l1 grey " >
+        <div class="single_service text-center">
+          <div class="icon">
+              
+                 <img src="/static/IMG/icon.png" alt="">
+          </div>
+          <h5>
+                  Web  hosting
+          </h5>
+          <p> To maintaining stable and secure storage spaces of website</p>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
    
+
    </section>
    
    

@@ -21,7 +21,7 @@ def contact(request):
 
 
 def testimon(request):
-    return render(request ,'home.html')
+    return render(request ,'testimon.html')
 
 
 def projects(request):
