@@ -1,4 +1,4 @@
-% extends "projects/base.html" %}
+{% extends "base.html" %}
 {% block content %}
 
 {% endblock content %}
@@ -7,113 +7,26 @@
     <div class="container">
           
          <div class="row">
+           {% for post in File %}
            <div class="col s12 l7">
              <div class="card">
                <div class="card-image">
-                 <img src="/static/IMG/photo-1444464666168-49d633b86797.avif">
-                 <span class="card-title">Bite school</span>
+                 <img src="{{post.imageupload }}">
+                 <span class="card-title">{{post.Title_of_card}}</span>
                </div>
                <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
+                 <p>      {{post.commment}} </p>
                </div>
                <div class="card-action">
-                 <a href="http://biteschool.herokuapp.com/">Heroku link</a>
+                 <a href="{{post. link_of_the_card }}">Heroku link</a>
                  <a href="https://github.com/hassanyange/myproject">Github link</a>
                </div>
              </div>
            </div>
-
-           <div class="col s12 l7">
-             <div class="card">
-               <div class="card-image">
-                 <img src="/static/IMG/photo-1447752875215-b2761acb3c5d.avif">
-                 <span class="card-title">projecr 2</span>
-               </div>
-               <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-               </div>
-               <div class="card-action">
-                 <a href="#">This is a link</a>
-               </div>
-             </div>
+           {% endfor %}
          </div>
-
-
-
-         <div class="row">
-           <div class="col s12 l7">
-             <div class="card">
-               <div class="card-image">
-                 <img src="/static/IMG/photo-1470770903676-69b98201ea1c.avif">
-                 <span class="card-title">project 3</span>
-               </div>
-               <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-               </div>
-               <div class="card-action">
-                 <a href="http://biteschool.herokuapp.com/">Heroku link</a>
-                 <a href="https://github.com/hassanyange/myproject">Github link</a>
-               </div>
-             </div>
-           </div>
-
-           <div class="col s12 l7">
-             <div class="card">
-               <div class="card-image">
-                 <img src="/static/IMG/photo-1458501534264-7d326fa0ca04.avif">
-                 <span class="card-title">projecr 4</span>
-               </div>
-               <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-               </div>
-               <div class="card-action">
-                 <a href="#">This is a link</a>
-               </div>
-             </div>
-         </div>
-
-
-
-         <div class="row">
-           <div class="col s12 l7">
-             <div class="card">
-               <div class="card-image">
-                 <img src="/static/IMG/photo-1475924156734-496f6cac6ec1.avif">
-                 <span class="card-title">project 5</span>
-               </div>
-               <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-               </div>
-               <div class="card-action">
-                 <a href="http://biteschool.herokuapp.com/">Heroku link</a>
-                 <a href="https://github.com/hassanyange/myproject">Github link</a>
-               </div>
-             </div>
-           </div>
-
-           <div class="col s12 l7">
-             <div class="card">
-               <div class="card-image">
-                 <img src="/static/IMG/photo-1473773508845-188df298d2d1.avif">
-                 <span class="card-title">projecr 6</span>
-               </div>
-               <div class="card-content">
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-               </div>
-               <div class="card-action">
-                 <a href="#">This is a link</a>
-               </div>
-             </div>
-         </div>
-
 
       </div>
-
+       
 </section>
 <!--       end of project section-->
