@@ -10,3 +10,11 @@ class Cards(models.Model):
     
     def __str__(self):
         return self.Title_of_the_card 
+class Form(models.Model) :
+    FirstName = models.CharField(max_length=25)
+    LastName = models.CharField(max_length=25)
+    Email = models.EmailField(max_length=100)
+    Message = models.TextField(max_length=1000)
+    
+    def __str__(self):
+        return self.Name    
