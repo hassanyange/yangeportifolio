@@ -1,15 +1,18 @@
+
 from django.db import models
 
 # Create your models here.
 class Cards(models.Model):
     imageupload = models.ImageField(upload_to = 'media')
-    Title_of_card = models.CharField(max_length= 30 ,default= 'Title of card')
-    heroku_link = models.CharField(max_length=30)
-    github_link = models.CharField(max_length=30)
-    commment = models.CharField(max_length=100)
+    Title_of_card = models.CharField(max_length= 30)
+    heroku_link = models.CharField(max_length=30 , default= 'https://dashboard.heroku.com/apps/yange-portifolio-project')
+    github_link = models.CharField(max_length=30, default= 'https://github.com/hassanyange/yangeshop.git')
+    commment = models.CharField(max_length=100 , default= 'small explanations')
+    
     
     def __str__(self):
-        return self.Title_of_the_card 
+        return self.Title_of_card 
+    
 class Form(models.Model) :
     FirstName = models.CharField(max_length=25)
     LastName = models.CharField(max_length=25)

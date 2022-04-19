@@ -1,4 +1,8 @@
 body {
+   font: optional;
+   font-size: medium;
+   font-style:oblique;
+   font-size-adjust: initial;
     
 }
 .image {

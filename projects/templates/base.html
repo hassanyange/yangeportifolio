@@ -41,20 +41,20 @@
           <a href="#!" class="brand-logo">HassanYange</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down ">
-            <li><a class="btn brown tooltipped" data-position="bottom" data-tooltip="bottom" href="{% url 'home_return' %}">Home</a></li>
-            <li><a class="btn brown tooltipped" data-position="bottom" data-tooltip="I am a tooltip" href="{% url 'about_return' %}">About me</a></li>
-            <li><a class="btn brown tooltipped" data-position="bottom" data-tooltip="I am a tooltip" href="{% url 'testimon_return' %} ">Testimonials</a></li>
-            <li><a class="btn brown tooltipped" data-position="bottom" data-tooltip="I am a tooltip" href="{% url 'projects_return' %}">Projects</a></li>
-            <li><a class="btn brown tooltipped" data-position="bottom" data-tooltip="I am a tooltip" href="{% url 'contact_return' %}">Contact</a></li>
+            <li><a class="btn brown tooltipped" data-position="top" data-tooltip="Home" href="{% url 'home_return' %}">Home</a></li>
+            <li><a class="btn brown tooltipped" data-position="down" data-tooltip="About" href="{% url 'about_return' %}">About me</a></li>
+            <li><a class="btn brown tooltipped" data-position="top" data-tooltip="Testimonials" href="{% url 'testimon_return' %} ">Testimonials</a></li>
+            <li><a class="btn brown tooltipped" data-position="down" data-tooltip="Projects" href="{% url 'projects_return' %}">Projects</a></li>
+            <li><a class="btn brown tooltipped" data-position="down" data-tooltip="Contact" href="{% url 'contact_return' %}">Contact</a></li>
         
           
         </div>
         <ul class="sidenav brown "  id="mobile-demo">
-          <li><a  href="{% url 'home_return' %}">Home</a></li>
-          <li><a  href="{% url 'about_return' %}">About me</a></li>
-          <li><a  href="{% url 'projects_return' %}">Projects</a></li>
-          <li><a  href="{% url 'testimon_return' %} ">Testimonials</a></li>
-          <li><a  href="{% url 'contact_return' %}">Contact</a></li>
+          <li><a class="white-text" href="{% url 'home_return' %}">Home</a></li>
+          <li><a class="white-text"  href="{% url 'about_return' %}">About me</a></li>
+          <li><a class="white-text"  href="{% url 'projects_return' %}">Projects</a></li>
+          <li><a class="white-text"  href="{% url 'testimon_return' %} ">Testimonials</a></li>
+          <li><a class="white-text"  href="{% url 'contact_return' %}">Contact</a></li>
         </ul>
       </nav>
     
@@ -148,6 +148,7 @@
                 
                  <script>
                   $(document).ready(function(){
+                    M.AutoInit();
                     $('.slider').slider();
                     $(".sidenav").sidenav();
                     $('.fixed-action-btn').floatingActionButton();
